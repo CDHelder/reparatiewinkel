@@ -1,0 +1,57 @@
+﻿@model RepairShop.Data.Models.RepairOrder
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details of @Html.DisplayFor(model => model.Name)</h2>
+
+<div>
+    <h4>Repair Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <br>
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusRepair)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusRepair)
+        </dd>
+        <br>
+        <dt>
+            @Html.DisplayNameFor(model => model.BeginDate)
+        </dt>
+
+        <dd>
+            @if (Model.BeginDate <= DateTime.Today)
+            {
+                <p style="color:red">@Model.BeginDate.ToShortDateString()</p>
+            }
+            else
+            {
+                @Html.DisplayFor(model => Model.BeginDate)
+            }
+        </dd>
+        <br>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
