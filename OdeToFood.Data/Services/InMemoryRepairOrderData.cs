@@ -8,8 +8,7 @@ namespace RepairShop.Data.Services
     public class InMemoryRepairOrderData : IRepairOrderData
     {
         List<RepairOrder> repairOrders;
-        // misschien hier lijst ophalen met STATUS INHOUD en TELLING
-
+        
         public void Add(RepairOrder repairOrder)
         {
             repairOrders.Add(repairOrder);
@@ -24,6 +23,7 @@ namespace RepairShop.Data.Services
             {
                 existing.Name = repairOrder.Name;
                 existing.StatusRepair = repairOrder.StatusRepair;
+                existing.HoursWorked = repairOrder.HoursWorked;
                 existing.RepairEmployee = repairOrder.RepairEmployee;
                 existing.BeginDate = repairOrder.BeginDate;
                 existing.EndDate = repairOrder.EndDate;

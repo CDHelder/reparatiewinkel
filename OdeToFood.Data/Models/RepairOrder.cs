@@ -22,6 +22,9 @@ namespace RepairShop.Data.Models
         [Display(Name = "Repair Employee")]
         public Employee RepairEmployee { get; set; }
 
+        [Display(Name = "Hours Worked")]
+        public int HoursWorked { get; set; }
+
         [Required]
         [Display(Name="Begin date")]
         [DataType(DataType.Date)]
