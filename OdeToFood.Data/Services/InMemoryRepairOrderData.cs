@@ -19,10 +19,12 @@ namespace RepairShop.Data.Services
         public void Update(RepairOrder repairOrder)
         {
             var existing = Get(repairOrder.Id);
+
             if (existing != null)
             {
                 existing.Name = repairOrder.Name;
                 existing.StatusRepair = repairOrder.StatusRepair;
+                existing.RepairEmployee = repairOrder.RepairEmployee;
                 existing.BeginDate = repairOrder.BeginDate;
                 existing.EndDate = repairOrder.EndDate;
             }
@@ -41,6 +43,7 @@ namespace RepairShop.Data.Services
         public void Delete(int id)
         {
             var repairorder = Get(id);
+
             if (repairorder != null)
             {
                 repairOrders.Remove(repairorder);

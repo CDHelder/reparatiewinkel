@@ -17,7 +17,6 @@ namespace RepairShop.Web.Controllers
             this.db = db;
         }
 
-        // GET: Restaurants
         [HttpGet]
         public ActionResult Index()
         {

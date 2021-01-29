@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RepairShop.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,10 +13,14 @@ namespace RepairShop.Data.Models
         public int Id { get; set; }
 
         [Required]
+        [MaxLength(255)]
         public string Name { get; set; }
 
         [Display(Name="Repair status")]
         public Status StatusRepair { get; set; }
+
+        [Display(Name = "Repair Employee")]
+        public Employee RepairEmployee { get; set; }
 
         [Required]
         [Display(Name="Begin date")]
@@ -26,5 +31,11 @@ namespace RepairShop.Data.Models
         [Display(Name = "End date")]
         [DataType(DataType.Date)]
         public DateTime EndDate { get; set; }
+        
+        [Display(Name = "Description")]
+        [DataType(DataType.MultilineText)]
+        [MaxLength(500)]
+        public string Description { get; set; }
+        
     }
 }

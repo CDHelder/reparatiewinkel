@@ -20,6 +20,7 @@ namespace RepairShop.Web.Api
         public IEnumerable<RepairOrder> Get()
         {
             var model = db.GetAll();
+
             return model;
         }
     }
