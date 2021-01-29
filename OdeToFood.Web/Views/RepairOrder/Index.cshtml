@@ -29,7 +29,19 @@
 
     @foreach (var item in Model)
     {
-        <tr>
+        string status = item.StatusRepair.ToString();
+        string bgcolor;
+
+        switch (status)
+        {
+            case "On_hold":             bgcolor = "lightcoral"; break;
+            case "Under_repair":        bgcolor = "lightgoldenrodyellow"; break;
+            case "Waiting_for_parts":   bgcolor = "lightgoldenrodyellow"; break;
+            case "Done":                bgcolor = "lightgreen"; break;
+            default:                    return;
+        }
+
+        <tr style='background-color:@bgcolor;'>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
@@ -40,12 +52,12 @@
 
             <td>
                 @if (item.BeginDate <= DateTime.Today)
-                {
+                        {
                     <p style="color:red">@item.BeginDate.ToShortDateString()</p>
                 }
                 else
-                {
-                    @Html.DisplayFor(modelItem => item.BeginDate)
+            {
+                @Html.DisplayFor(modelItem => item.BeginDate)
                 }
             </td>
 
@@ -59,6 +71,8 @@
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>
+
+        }
     }
 
 </table>

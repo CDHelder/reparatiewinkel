@@ -28,17 +28,18 @@ namespace RepairShop.Data.Models
         [Required]
         [Display(Name="Begin date")]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime BeginDate { get; set; }
         
         [Required]
         [Display(Name = "End date")]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime EndDate { get; set; }
         
         [Display(Name = "Description")]
         [DataType(DataType.MultilineText)]
         [MaxLength(500)]
         public string Description { get; set; }
-        
     }
 }
