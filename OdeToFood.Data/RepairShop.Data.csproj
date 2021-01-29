@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Parts.cs" />
     <Compile Include="Models\Status.cs" />
     <Compile Include="Models\RepairOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

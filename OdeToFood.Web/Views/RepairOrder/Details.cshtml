@@ -13,7 +13,6 @@
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
@@ -23,7 +22,6 @@
         <dt>
             @Html.DisplayNameFor(model => model.StatusRepair)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.StatusRepair)
         </dd>
@@ -51,7 +49,6 @@
         <dt>
             @Html.DisplayNameFor(model => model.BeginDate)
         </dt>
-
         <dd>
             @if (Model.BeginDate.DayOfYear <= DateTime.Today.DayOfYear)
             {
@@ -68,9 +65,16 @@
         <dt>
             @Html.DisplayNameFor(model => model.EndDate)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <br>
+        <dt>
+            @Html.DisplayFor(model => model.RepairParts)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RepairParts)
         </dd>
 
         <br>
@@ -78,7 +82,6 @@
         <dt>
             @Html.DisplayNameFor(model => model.Description)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Description)
         </dd>

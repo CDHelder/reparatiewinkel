@@ -36,6 +36,9 @@ namespace RepairShop.Data.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime EndDate { get; set; }
+
+        [Display(Name = "Parts")] // ik denk iets van datatype toevoegen zodat het een dropdownbox wordt?
+        public Parts RepairParts { get; set; }
         
         [Display(Name = "Description")]
         [DataType(DataType.MultilineText)]
