@@ -51,8 +51,8 @@
             </td>
 
             <td>
-                @if (item.BeginDate <= DateTime.Today)
-                        {
+                @if (item.BeginDate.DayOfYear <= DateTime.Today.DayOfYear)
+                {
                     <p style="color:red">@item.BeginDate.ToShortDateString()</p>
                 }
                 else

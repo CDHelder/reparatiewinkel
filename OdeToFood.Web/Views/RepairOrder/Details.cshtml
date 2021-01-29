@@ -53,9 +53,9 @@
         </dt>
 
         <dd>
-            @if (Model.BeginDate <= DateTime.Today)
+            @if (Model.BeginDate.DayOfYear <= DateTime.Today.DayOfYear)
             {
-                <p style="color:green">@Model.BeginDate.ToShortDateString()</p>
+                <p style="color:red">@Model.BeginDate.ToShortDateString()</p>
             }
             else
             {

@@ -14,7 +14,5 @@ namespace RepairShop.Data.Services
         void Add(RepairOrder repairOrder);
         void Update(RepairOrder repairOrder);
         void Delete(int id);
-        //Status Get(string status);
-        
     }
 }
