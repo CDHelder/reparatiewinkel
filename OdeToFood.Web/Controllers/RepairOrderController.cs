@@ -21,6 +21,7 @@ namespace RepairShop.Web.Controllers
         public ActionResult Index()
         {
             var model = db.GetAll();
+
             return View(model);
         }
 

@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<RepairShop.Data.Models.RepairOrder>
+@
 
 @{
     ViewBag.Title = "Index";
@@ -7,6 +8,8 @@
 <h2>
     All registered repair orders
 </h2>
+
+<h3> </h3>
 
 <p>
     @Html.ActionLink("Create New Repair Order", "Create")
@@ -74,8 +77,5 @@
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>
-
-        }
-    }
-
+     }
 </table>

@@ -39,7 +39,10 @@ namespace RepairShop.Data.Models
 
         [Display(Name = "Parts")] // ik denk iets van datatype toevoegen zodat het een dropdownbox wordt?
         public Parts RepairParts { get; set; }
-        
+
+        [Display(Name = "PartType")] // ik denk iets van datatype toevoegen zodat het een dropdownbox wordt?
+        public PartType PartType { get; set; }
+
         [Display(Name = "Description")]
         [DataType(DataType.MultilineText)]
         [MaxLength(500)]
